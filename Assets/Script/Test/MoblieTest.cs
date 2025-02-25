@@ -14,7 +14,7 @@ public class MoblieTest : MonoBehaviour
     [SerializeField]
     private Transform cameraTransform;
     [SerializeField]
-    private float zoomSpeed = 1.0f;
+    private float zoomSpeed = 0.5f;
 
     private void Update()
     {
@@ -107,14 +107,14 @@ public class MoblieTest : MonoBehaviour
         // 직전 프레임의 두 터치 사이의 거리가 현재보다 작을 경우 -> 줌 인
         if (PastpositionDistance < CurpostionDistance)
         {
-            cameraTransform.position += Vector3.back * ZoomModifier * Time.deltaTime;
+            cameraTransform.position += Vector3.right* ZoomModifier * Time.deltaTime;
 
         }
 
         // 직전 프레임의 두 터치 사이의 거리가 현재보다 클 경우 -> 줌 아웃
         else if (PastpositionDistance > CurpostionDistance)
         {
-            cameraTransform.position += Vector3.forward * ZoomModifier * Time.deltaTime;
+            cameraTransform.position += Vector3.up * ZoomModifier * Time.deltaTime;
 
         }
     }
