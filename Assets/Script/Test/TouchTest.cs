@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class MoblieTest : MonoBehaviour
+
+
+
+public class TouchTest : MonoBehaviour
 {
     [Header("Debug Test")]
     [SerializeField]   // Unity가 필드를 직렬화하도록 강제하는 속성
@@ -114,7 +117,7 @@ public class MoblieTest : MonoBehaviour
         // 직전 프레임의 두 터치 사이의 거리가 현재보다 클 경우 -> 줌 아웃
         else if (PastpositionDistance > CurpostionDistance)
         {
-            cameraTransform.position += Vector3.up * ZoomModifier * Time.deltaTime;
+            cameraTransform.position += Vector3.left * ZoomModifier * Time.deltaTime;
 
         }
     }
