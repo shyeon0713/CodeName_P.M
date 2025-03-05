@@ -246,8 +246,8 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.7169812, g: 0.66625136, b: 0.66625136, a: 1}
+    m_SelectedColor: {r: 0.7830189, g: 0.5577163, b: 0.5577163, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -266,7 +266,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4273352625646943954}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 1310bd3fb7fe18d4bb88b86fa6320a91, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: set_name
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: OnSendButtonClicked()
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2848761615373411430
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +290,7 @@ GameObject:
   - component: {fileID: 6296673093387143550}
   - component: {fileID: 6331214660916562489}
   m_Layer: 0
-  m_Name: ChatBot_UI
+  m_Name: ChatBot_Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,9 +324,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1310bd3fb7fe18d4bb88b86fa6320a91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInput: {fileID: 0}
-  sendButton: {fileID: 0}
-  responseText: {fileID: 0}
+  userInput: {fileID: 8704860457750354465}
+  sendButton: {fileID: 3899396234087654222}
+  responseText: {fileID: 8329178545651441146}
 --- !u!1 &3300312404703017646
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,7 +456,7 @@ Canvas:
   m_GameObject: {fileID: 6466258339118887875}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -576,7 +588,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Send
 --- !u!1 &7954250581577746452
 GameObject:
   m_ObjectHideFlags: 0

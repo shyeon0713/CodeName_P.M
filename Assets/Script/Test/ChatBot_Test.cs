@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class ChatBot_Test : MonoBehaviour
 {
     // OpenAI API 키와 사용할 모델 설정
-    private string apiKey = "YOUR_OPENAI_API_KEY"; // OpenAI API 키를 입력
-    private string model = "gpt-4"; // 사용할 모델 이름 설정
+    private string apiKey = ""; // OpenAI API 키를 입력
+    private string model = "Groq_TestLLM"; // 사용할 모델 이름 설정
 
     // UI 요소 참조
     public InputField userInput;  // 사용자 입력 필드
@@ -21,6 +21,7 @@ public class ChatBot_Test : MonoBehaviour
 
     // 버튼 클릭 시 OpenAI로 메시지를 전송
     void OnSendButtonClicked(){
+        Debug.Log("Button Click Checked");
         string message = userInput.text;
         if (!string.IsNullOrEmpty(message)){
             responseText.text = "Thinking...";
