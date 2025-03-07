@@ -12,6 +12,9 @@ public class InputText : MonoBehaviour
     [SerializeField]
     private TMP_InputField inputField;  //InputField를 코드에서 생성할 시, 메서드 리스트 사용 가능
 
+    private TouchScreenKeyboard keyboard; // 키보드 객체
+    private string inputText = ""; // 입력값 저장할 변수
+
 
     //(+) InputField 컴포넌트는 UnityEngine.UI.InputField / TextMeshPro - InputField 컴포넌트는 TMPro.TMP_InputField
 
@@ -42,4 +45,32 @@ public class InputText : MonoBehaviour
     {
         Text.text = $"Deselect : {TestText}";
     }
+
+
+    void OnGUI()
+    {
+        // 현재 입력된 텍스트를 표시
+        GUI.Label(new Rect(10, 10, 300, 50), "입력 값: " + inputText);
+
+        // 키보드 열기 버튼
+        if (GUI.Button(new Rect(10, 70, 150, 50), "키보드 열기"))
+        {
+            OpenKeyboard();
+        }
+    }
+
+    void OpenKeyboard()
+    {
+        keyboard = TouchScreenKeyboard.Open(inputText, TouchScreenKeyboardType.Default);
+    }
+
+    void Update()
+    {
+        // 키보드가 열려 있고 입력값이 변경되었으면 변수 업데이트
+        if (keyboard != null && keyboard.active)
+        {
+            inputText = keyboard.text; // 사용자가 입력한 값을 inputText 변수에 저장
+        }
+    }
 }
+
