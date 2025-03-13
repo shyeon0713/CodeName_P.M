@@ -17,6 +17,8 @@ public class MoveToBriefingRoom : MonoBehaviour
 
             if (touch.phase == TouchPhase.Began)   // 터치의 상태가 터치 시작일 때 -> Touch Begin 출력
             {
+                //UI animation 실행
+                //2초 정지
                 // 'TargetScene'은 이동하고자 하는 씬의 이름입니다.
                 // 씬 이름을 정확히 입력하세요.
                 SceneManager.LoadScene("BriefingRoom");
