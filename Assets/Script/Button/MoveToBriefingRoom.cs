@@ -11,12 +11,12 @@ public class MovetoBriefingRoom : MonoBehaviour
     public void Start()
     {
         SwitchScene = GetComponent<Button>();
-        SwitchScene.onClick.AddListener(ClickCloset);
+        SwitchScene.onClick.AddListener(GotoBriefingRoom);
 
     }
-    private void ClickCloset()   //책장 버튼 클릭 시
+    private void GotoBriefingRoom()   //책장 버튼 클릭 시
     {
-        Debug.Log("ButtonClick");   
+       // Debug.Log("ButtonClick");   
         SceneManager.LoadScene("BriefingRoom");
     }  
  

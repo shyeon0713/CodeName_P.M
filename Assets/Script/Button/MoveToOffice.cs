@@ -2,13 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class MoveToOffice : MonoBehaviour
 {
-  
-    // 버튼 클릭 시 호출될 메소드
-    public void OnButtonClick()
+    public Button SwitchScene;  // 생성한 버튼 컴포넌트를 연결해 둘 변수
+    public void Start()
     {
-    
-        SceneManager.LoadScene("Office");
+        SwitchScene = GetComponent<Button>();
+        SwitchScene.onClick.AddListener(GotoOffice);
+
     }
+    private void GotoOffice()   //소파 버튼 클릭 시
+    {
+        //Debug.Log("ButtonClick");
+        SceneManager.LoadScene("BriefingRoom");
+    }
+
 }

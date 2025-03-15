@@ -2,35 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 public class MoveToMainRoom : MonoBehaviour
 {
 
-    private void Update()
+    public Button SwitchScene;  // 생성한 버튼 컴포넌트를 연결해 둘 변수
+
+    public void Start()
     {
-        OnSingleTouch();
+        SwitchScene = GetComponent<Button>();
+        SwitchScene.onClick.AddListener(GotoMainRoom);
+
     }
-
-    // 버튼 클릭 시 호출될 메소드
-    private void OnSingleTouch()
+    private void GotoMainRoom()   // 프리핑룸에서 책장 버튼 클릭 시
     {
-        if (Input.touchCount > 0)  //현재 터치한 손가락 개수가 1개 이상일때 (터치 및 입력이 있을 경우)
-        {
-            Touch touch = Input.GetTouch(0); //-> 단일 터치이기 때문
-
-            if (touch.phase == TouchPhase.Began)   // 터치의 상태가 터치 시작일 때 -> Touch Begin 출력
-            {
-                // 'TargetScene'은 이동하고자 하는 씬의 이름입니다.
-                // 씬 이름을 정확히 입력하세요.
-                SceneManager.LoadScene("MainRoom");
-            }
-
-
-            else if (touch.phase == TouchPhase.Ended)   // 터치의 상태가 터치 종료일 ㄸ때 -> Touch End 출력
-            {
-                // 효과 입력
-            }
-
-        }
-      
+        // Debug.Log("ButtonClick");   
+        SceneManager.LoadScene("MainRoom");
     }
 }
