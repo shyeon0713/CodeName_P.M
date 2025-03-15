@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BriefingRoom.unity
     guid: 30a06e74200e644488f63dc9ff21f828
+  - enabled: 1
+    path: Assets/Scenes/Briefing.unity
+    guid: 2540163692ced9f428ab2f02029fa0bb
   m_configObjects: {}
