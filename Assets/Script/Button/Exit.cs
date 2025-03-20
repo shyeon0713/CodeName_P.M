@@ -16,7 +16,7 @@ public class Exit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SwitchScene.onClick.AddListener(GameExit);  //UI 버튼 누를 시 
+        //SwitchScene.onClick.AddListener(GameExit);  //UI 버튼 누를 시 
         if (Application.platform == RuntimePlatform.Android)  //안드로이드 하드웨어 버튼의 경우
         {
             if (Input.GetKey(KeyCode.Home))
