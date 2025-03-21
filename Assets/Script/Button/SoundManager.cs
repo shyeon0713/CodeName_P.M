@@ -1,64 +1,71 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;  // 씬 관련 기능 사용
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioSource BGM;  // 오디오 소스
-    public bool isPlaying = true;  // 음악 재생 상태(처음에는 재생)
+    public AudioSource BGM;
+    public bool isPlaying = true;
 
     [System.Serializable]
     public struct SceneBGM
     {
-        public string sceneName;  // 씬 이름 
-        public AudioClip bgmClip;  // 해당 씬에 대한 배경음악
+        public string sceneName;
+        public AudioClip bgmClip;
     }
 
     public SceneBGM[] BGMList;
 
     private void Awake()
     {
-        // BGM 오디오 소스 초기화
+        // 싱글톤 패턴 적용 (중복 생성 방지)
+        if (FindObjectsOfType<SoundManager>().Length > 1)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        DontDestroyOnLoad(gameObject);
         BGM = gameObject.AddComponent<AudioSource>();
 
-        // 씬 전환 시 음악 상태 유지
-        DontDestroyOnLoad(gameObject);
+        // 씬이 바뀔 때마다 BGM 변경
+        SceneManager.sceneLoaded += OnSceneLoaded;
 
-        // BGM이 이미 재생 중이면 재생 상태 유지
-        if (isPlaying)
-        {
-            BGM.Play();
-        }
-        else
-        {
-            BGM.Pause();
-        }
+        // 현재 씬의 BGM 설정
+        SetBGM(SceneManager.GetActiveScene().name);
     }
 
-    // 음악 재생/일시 정지 처리
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        SetBGM(scene.name);
+    }
+
+    public void SetBGM(string sceneName)
+    {
+        for (int i = 0; i < BGMList.Length; i++)
+        {
+            if (BGMList[i].sceneName == sceneName)
+            {
+                if (BGM.clip != BGMList[i].bgmClip)  // 같은 곡이면 변경 X
+                {
+                    BGM.clip = BGMList[i].bgmClip;
+                    if (isPlaying)
+                    {
+                        BGM.Play();
+                    }
+                }
+                return;
+            }
+        }
+      
+    }
+
     public void PlayMusic()
     {
         if (isPlaying)
-        {
-            BGM.Pause();  // 음악 일시 정지
-        }
+            BGM.Pause();
         else
-        {
-            BGM.Play();  // 음악 재생
-        }
-
-        isPlaying = !isPlaying;  // 상태 반전
-    }
-
-    // 씬에 맞는 배경음악 설정
-    public void SetBGM(AudioClip bgmClip)
-    {
-        BGM.clip = bgmClip;
-        if (isPlaying)
-        {
             BGM.Play();
-        }
+
+        isPlaying = !isPlaying;
     }
 }
-

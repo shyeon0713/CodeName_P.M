@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayButton : MonoBehaviour
+public class SoundButton : MonoBehaviour
 {
     public Button playButton;  // 버튼
     public Image btnImage;  // 버튼 이미지
@@ -20,24 +20,16 @@ public class PlayButton : MonoBehaviour
         btnImage = playButton.GetComponent<Image>();
 
         // 초기 버튼 이미지 설정
-        if (btnImage != null && PlaySprite != null)
-        {
-            btnImage.sprite = PlaySprite; 
-        }
+        UpdateSprite();
     }
 
-    public void SwapeSprite()
+    private void SwapeSprite()
     {
-        // 버튼 이미지 변경
-        if (soundManager.isPlaying)
-        {
-            btnImage.sprite = PlaySprite;
-        }
-        else
-        {
-            btnImage.sprite = StopSprite;
-        }
-
-        soundManager.PlayMusic();  // 음악을 재생하거나 일시 정지
+        soundManager.PlayMusic();   //soundManager의 PlayMusic()을 참조
+        UpdateSprite();
+    }
+    private void UpdateSprite()
+    {
+        btnImage.sprite = soundManager.isPlaying ? PlaySprite : StopSprite;
     }
 }
