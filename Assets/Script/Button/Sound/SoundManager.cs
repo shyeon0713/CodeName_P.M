@@ -1,10 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;  // 씬 관련 기능 사용
+using UnityEngine.SceneManagement;  // Scene
 
 public class SoundManager : MonoBehaviour
 {
     public AudioSource BGM;
-    public bool isPlaying = true;
+    public bool OnSound = true;
 
     [System.Serializable]
     public struct SceneBGM
@@ -48,7 +50,7 @@ public class SoundManager : MonoBehaviour
                 if (BGM.clip != BGMList[i].bgmClip)  // 같은 곡이면 변경 X
                 {
                     BGM.clip = BGMList[i].bgmClip;
-                    if (isPlaying)
+                    if (OnSound)
                     {
                         BGM.Play();
                     }
@@ -59,13 +61,13 @@ public class SoundManager : MonoBehaviour
       
     }
 
-    public void PlayMusic()
+    public void PlaySound()
     {
-        if (isPlaying)
+        if (OnSound)
             BGM.Pause();
         else
             BGM.Play();
 
-        isPlaying = !isPlaying;
+        OnSound = !OnSound;
     }
 }

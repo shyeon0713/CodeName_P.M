@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SoundButton : MonoBehaviour
 {
-    public Button playButton;  // 버튼
+    public Button Soundbutton;  // 버튼
     public Image btnImage;  // 버튼 이미지
     public Sprite PlaySprite;  // Play 버튼 이미지
     public Sprite StopSprite;  // Stop 버튼 이미지
@@ -15,9 +15,9 @@ public class SoundButton : MonoBehaviour
     {
         // SoundManager 참조 찾기
         soundManager = FindObjectOfType<SoundManager>();
-        playButton.onClick.AddListener(SwapeSprite);
+        Soundbutton.onClick.AddListener(SwapeSprite);
 
-        btnImage = playButton.GetComponent<Image>();
+        btnImage = Soundbutton.GetComponent<Image>();
 
         // 초기 버튼 이미지 설정
         UpdateSprite();
@@ -25,11 +25,11 @@ public class SoundButton : MonoBehaviour
 
     private void SwapeSprite()
     {
-        soundManager.PlayMusic();   //soundManager의 PlayMusic()을 참조
+        soundManager.PlaySound();   //soundManager의 PlayMusic()을 참조
         UpdateSprite();
     }
     private void UpdateSprite()
     {
-        btnImage.sprite = soundManager.isPlaying ? PlaySprite : StopSprite;
+        btnImage.sprite = soundManager.OnSound ? PlaySprite : StopSprite;
     }
 }
