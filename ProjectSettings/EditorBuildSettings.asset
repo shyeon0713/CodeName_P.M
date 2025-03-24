@@ -12,14 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: 555f5d0f604cd634298b354f05f80b46
   - enabled: 1
-    path: Assets/Scenes/Office.unity
-    guid: d0cf88652964ab1418318c08ee900641
-  - enabled: 1
     path: Assets/Scenes/MainRoom.unity
     guid: cc112068f94297541910c47c70c179b3
   - enabled: 1
     path: Assets/Scenes/BriefingRoom.unity
     guid: 30a06e74200e644488f63dc9ff21f828
+  - enabled: 1
+    path: Assets/Scenes/Office.unity
+    guid: d0cf88652964ab1418318c08ee900641
   - enabled: 1
     path: Assets/Scenes/Briefing.unity
     guid: 2540163692ced9f428ab2f02029fa0bb

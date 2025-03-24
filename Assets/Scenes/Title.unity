@@ -366,10 +366,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 171755022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8af717baef411d4fa2b4a61cc1f5e35, type: 3}
+  m_Script: {fileID: 11500000, guid: f15319249189d3b45bff951643f04ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SwitchScene: {fileID: 0}
+  Bt_MainRoom: {fileID: 171755024}
 --- !u!1 &268243222
 GameObject:
   m_ObjectHideFlags: 0
