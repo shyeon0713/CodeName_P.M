@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: BGMslider
       value: 
       objectReference: {fileID: 1951128974}
+    - target: {fileID: 5024386950389358986, guid: f29122eb99665d4498a3450bf263afcc, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5999125993301777377, guid: f29122eb99665d4498a3450bf263afcc, type: 3}
       propertyPath: m_Name
       value: SoundManager
@@ -279,17 +283,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4732522266106498491, guid: f45fc1e2b76c38642b53d74e26c93f60, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7844290439195470858, guid: f45fc1e2b76c38642b53d74e26c93f60, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 8155790195571198129, guid: f45fc1e2b76c38642b53d74e26c93f60, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8348692988433819035, guid: f45fc1e2b76c38642b53d74e26c93f60, type: 3}
       propertyPath: m_Pivot.x
@@ -369,14 +365,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8348692988433819035, guid: f45fc1e2b76c38642b53d74e26c93f60, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8725534219550177186, guid: f45fc1e2b76c38642b53d74e26c93f60, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9206097767521500523, guid: f45fc1e2b76c38642b53d74e26c93f60, type: 3}
-      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -828,7 +816,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -334158289
   m_SortingLayer: 2
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: c8bfc988413f57a429fce101a2c22f69, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1504,7 +1492,7 @@ GameObject:
   - component: {fileID: 1730388829}
   - component: {fileID: 1730388828}
   m_Layer: 5
-  m_Name: MoveTpBriefing
+  m_Name: MoveToBriefing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

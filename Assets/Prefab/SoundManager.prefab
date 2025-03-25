@@ -266,10 +266,10 @@ MonoBehaviour:
   OnSFX: 1
   SFXList:
   - SFXName: ChangeScene
-    bgmClip: {fileID: 8300000, guid: 822f09cc1cc594a4d9b715b0a325479c, type: 3}
+    SFXClip: {fileID: 8300000, guid: 5b48fc58dad454f41b23a7a8e749df68, type: 3}
   - SFXName: ClickButton
-    bgmClip: {fileID: 8300000, guid: 5b48fc58dad454f41b23a7a8e749df68, type: 3}
+    SFXClip: {fileID: 8300000, guid: 822f09cc1cc594a4d9b715b0a325479c, type: 3}
   - SFXName: TalkSFX
-    bgmClip: {fileID: 0}
+    SFXClip: {fileID: 8300000, guid: 822f09cc1cc594a4d9b715b0a325479c, type: 3}
   SoundControl: {fileID: 24100000, guid: 8393f84dcc5541d4f85f390919991ef1, type: 2}
   SFXslider: {fileID: 0}

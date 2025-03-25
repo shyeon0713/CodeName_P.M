@@ -19,18 +19,18 @@ public class SoundManager : MonoBehaviour
 
     public SceneBGM[] BGMList;
 
-    public AudioMixer SoundControl; // 만들어둔 오디오 믹서
-    float volume;  
-    public Slider BGMslider;  //BGMSlider -> Slider UI까지 조절, 오디오믹서가 작동하지 않는 문제발생하여 우선 Manager에 넣어 진행
+   //public AudioMixer SoundControl; // 만들어둔 오디오 믹서
+   // float volume;  
+  //  public Slider BGMslider;  //BGMSlider -> Slider UI까지 조절, 오디오믹서가 작동하지 않는 문제발생하여 우선 Manager에 넣어 진행
 
 
     private void Awake()
     {
 
-        BGMslider.value = 0.5f;  // volume UI 초기 설정 -> 50정도 
-        SoundControl.SetFloat("bgmvolume", Mathf.Log10(BGMslider.value) * 20); // volume -> 50으로
+       // BGMslider.value = 0.5f;  // volume UI 초기 설정 -> 50정도 
+       // SoundControl.SetFloat("bgmvolume", Mathf.Log10(BGMslider.value) * 20); // volume -> 50으로
  
-        BGMslider.onValueChanged.AddListener(SetBGMVolume);
+       // BGMslider.onValueChanged.AddListener(SetBGMVolume);
 
 
         // 싱글톤 패턴 적용 (중복 생성 방지)
@@ -90,9 +90,15 @@ public class SoundManager : MonoBehaviour
         OnSound = !OnSound;
     }
 
-    private void SetBGMVolume(float Slidervalue)    //Slider UI
-    {
-        SoundControl.SetFloat("bgmvolume", Mathf.Log10(Slidervalue) * 20);
-        // Volume 값이 데시벨이기 때문에 고정적인 간격을 가지지 못함으로 Log10 사용
-    }
+    /*  private void SetBGMVolume(float Slidervalue)    //Slider UI
+      {
+          SoundControl.SetFloat("bgmvolume", Mathf.Log10(Slidervalue) * 20);
+          // Volume 값이 데시벨이기 때문에 고정적인 간격을 가지지 못함으로 Log10 사용
+      }
+    */
+
+    //문제 -> Scene를 전환할 경우 이전 Scene에서 저장한 볼륨기록이 똑같이 적용되지 않음
+    // 해결방안 -> Player.prefs를 만든 후, 설정 값 저장
+    // Player.prefs의 경우 씬이 전환되면서 플레이어가 게임에 저장해야 할 부분을 저장
 }
+

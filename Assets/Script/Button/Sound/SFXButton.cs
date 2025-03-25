@@ -24,7 +24,7 @@ public class SFXButton : MonoBehaviour
 
     private void SwapeSprite()
     {
-        sfxManager.PlaySFX();
+        SFXManager.Instance.PlaySFX("ClickButton");  //효과음 재생
         UpdateSprite();
     }
     private void UpdateSprite()

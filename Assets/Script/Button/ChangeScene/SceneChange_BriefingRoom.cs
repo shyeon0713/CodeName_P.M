@@ -15,9 +15,9 @@ public class SceneChange_BriefingRoom : MonoBehaviour
     {
         sfxmanager = FindObjectOfType<SFXManager>();
 
-        Bt_Briefing = GetComponent<Button>();
-        Bt_Office = GetComponent<Button>();
-        Bt_MainRoom = GetComponent<Button>();
+       // Bt_Briefing = GetComponent<Button>();
+       // Bt_Office = GetComponent<Button>();
+       // Bt_MainRoom = GetComponent<Button>();
 
         Bt_Briefing.onClick.AddListener(GotoBriefingScene);
         Bt_Office.onClick.AddListener(GotoOffice);
@@ -26,21 +26,21 @@ public class SceneChange_BriefingRoom : MonoBehaviour
     }
     private void GotoBriefingScene()   //Briefing 씬으로 이동
     {
-        sfxmanager.SetSFX("ChangeScene");
+        SFXManager.Instance.PlaySFX("ChangeScene");  //효과음 재생
         // Debug.Log("ButtonClick");   
         SceneManager.LoadScene("Briefing");
     }
 
     private void GotoOffice()   //Office 씬으로 이동
     {
-        sfxmanager.SetSFX("ChangeScene");
+        SFXManager.Instance.PlaySFX("ChangeScene");  //효과음 재생
         //Debug.Log("ButtonClick");
         SceneManager.LoadScene("Office");
     }
 
     private void GotoMainRoom()   //Office 씬으로 이동
     {
-        sfxmanager.SetSFX("ChangeScene");
+        SFXManager.Instance.PlaySFX("ChangeScene");  //효과음 재생
         //Debug.Log("ButtonClick");
         SceneManager.LoadScene("MainRoom");
     }

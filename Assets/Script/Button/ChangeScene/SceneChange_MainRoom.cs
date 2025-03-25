@@ -18,7 +18,7 @@ public class SceneChange_MainRoom : MonoBehaviour
     }
     private void GotoBriefingRoom()   //책장 버튼 클릭 시
     {
-        //SFX 재생
+        SFXManager.Instance.PlaySFX("ChangeScene");  //효과음 재생
         // Debug.Log("ButtonClick");   
         SceneManager.LoadScene("BriefingRoom");
     }
