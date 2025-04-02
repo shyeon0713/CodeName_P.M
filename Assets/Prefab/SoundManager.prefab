@@ -248,8 +248,8 @@ MonoBehaviour:
     bgmClip: {fileID: 8300000, guid: eb368110c97cca7499f4e8b871ae1509, type: 3}
   - sceneName: Office
     bgmClip: {fileID: 8300000, guid: 7dd2e3496b3bb314e99bd1df1f57f615, type: 3}
-  SoundControl: {fileID: 24100000, guid: 8393f84dcc5541d4f85f390919991ef1, type: 2}
-  BGMslider: {fileID: 0}
+  - sceneName: DialogueRoom
+    bgmClip: {fileID: 8300000, guid: 7dd2e3496b3bb314e99bd1df1f57f615, type: 3}
 --- !u!114 &8421864875382046787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,5 +271,3 @@ MonoBehaviour:
     SFXClip: {fileID: 8300000, guid: 822f09cc1cc594a4d9b715b0a325479c, type: 3}
   - SFXName: TalkSFX
     SFXClip: {fileID: 8300000, guid: 822f09cc1cc594a4d9b715b0a325479c, type: 3}
-  SoundControl: {fileID: 24100000, guid: 8393f84dcc5541d4f85f390919991ef1, type: 2}
-  SFXslider: {fileID: 0}
