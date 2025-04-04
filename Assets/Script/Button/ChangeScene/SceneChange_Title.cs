@@ -14,7 +14,7 @@ public class SceneChange_Title : MonoBehaviour
     {
         sfxmanager = FindObjectOfType<SFXManager>();
 
-       // Bt_MainRoom = GetComponent<Button>();
+        //Bt_MainRoom = GetComponent<Button>();
 
         Bt_MainRoom.onClick.AddListener(GotoMainRoom);
 
@@ -22,7 +22,7 @@ public class SceneChange_Title : MonoBehaviour
 
     private void GotoMainRoom()
     {
-        SFXManager.Instance.PlaySFX("ChangeScene");  //효과음 재생
+      //  SFXManager.Instance.PlaySFX("ChangeScene");  //효과음 재생
         SceneManager.LoadScene("MainRoom");
     }
 }

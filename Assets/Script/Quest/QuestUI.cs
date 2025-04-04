@@ -6,22 +6,19 @@ using TMPro;
 
 public class QuestUI : MonoBehaviour
 {
-    public TMP_Text questText;
-    public Toggle questToggle; //Toggle 버튼 
+    public TMP_Text questtext;
+    public GameObject questcanvas;
 
-    void Start()
+    public void UpdateQuestUI()   //퀘스트 수령 시 활성화
     {
-        questText.gameObject.SetActive(false);
-        questToggle.onValueChanged.AddListener(ToggleQuest);
+      if(QuestManager.Instance.HasActiveQuest())
+        {
+            questcanvas.SetActive(true);
+            questtext.text = $"<b>퀘스트:</b> {QuestManager.Instance.currentQuest.questKey}";
+        }
+        else
+        {
+            questcanvas.SetActive(false);
+        }
     }
-    public void ToggleQuest(bool isOn)
-    {
-        questText.gameObject.SetActive(isOn);
-    }
-    public void SetQuest(string questTitle, string questDescription)
-    {
-        questText.text = $"<b>{questTitle}</b>\n{questDescription}";
-    }
-
-    // Toggle 메뉴에서 On Click() 설정
 }

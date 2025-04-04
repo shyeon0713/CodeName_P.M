@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 877004778529271105}
   - component: {fileID: 3330634897801654018}
   - component: {fileID: 6232800366916538818}
+  - component: {fileID: 1855199717076623623}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -45,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f98275f90a40e0459a223b2c55700d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Datenumber: 0
 --- !u!114 &6232800366916538818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,5 +57,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de56e8bcc90911b449178f1d382d0dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuest:
+    questKey: 
+    progress: 0
+    hasReceived: 0
+--- !u!114 &1855199717076623623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2806674078163899779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c2316e793902f84eb95521f26dd2e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
