@@ -54,6 +54,14 @@ class JSONReader:
         :return: 조건을 만족하는 행들의 특정 속성 값 리스트
         """
         return [row[column_name] for row in self.data if condition_func(row)]
+    
+    def set_scnario_info(self, scnario_name:str):
+        ScenarioReader = JSONReader("DataFile\ScenarioInfo_J.json", list_columns=["ScriptList","OrderList"])
+        SceneInfo.ScenarioText = (ScenarioReader.get_column_values(lambda row: row["ScenarioName"] == scnario_name, "ScriptList")[0])
+        SceneInfo.ScenarioOrder = (ScenarioReader.get_column_values(lambda row: row["ScenarioName"] == scnario_name, "OrderList")[0])
+        print(SceneInfo.ScenarioText)
+        print(SceneInfo.ScenarioOrder)
+
 
 # Groq 설정. 사이트에서 참고
 class ChatBot:
