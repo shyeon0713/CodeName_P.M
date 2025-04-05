@@ -3,6 +3,7 @@ from crewai import Agent, Task, Crew
 import re
 import statistics
 import time
+import json
 
 # 환경 변수 로드
 load_dotenv()
@@ -22,6 +23,7 @@ print(prompt_text)
 
 child_response = input("Enter the child's proposed resolution method: ")
 situation_response = input("What do you think is happening in this situation?: ")
+
 #답변 기준(DB에서 받아올 예정)
 
 Recap={"""The child and their group are researching Japan for a class project.  
@@ -342,6 +344,25 @@ average_scores = {
 print("\nFinal Average Similarity Scores:")
 print(f"[A: {average_scores['A']}%, B: {average_scores['B']}%, C: {average_scores['C']}%, D: {average_scores['D']}%, S: {average_scores['S']}%]")
 
+
+output_data = {
+    "prompt": prompt_text.strip(),
+    "child_response": child_response,
+    "situation_response": situation_response,
+    "average_scores": {
+        "A": average_scores["A"],
+        "B": average_scores["B"],
+        "C": average_scores["C"],
+        "D": average_scores["D"],
+        "S": average_scores["S"]
+    }
+}
+
+# 파일로 저장
+with open("child_conflict_analysis_result.json", "w", encoding="utf-8") as f:
+    json.dump(output_data, f, indent=4, ensure_ascii=False)
+
+print("\n결과가 'child_conflict_analysis_result.json' 파일에 저장되었습니다.")
 
 
 #아동 해결 방식
