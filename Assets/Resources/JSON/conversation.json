@@ -1,0 +1,74 @@
+{
+  "dialogues": [ // sprite는 happy, angry, normal 로 구성
+    {
+      "speaker": "NPC2",
+      "text": "Hey, I've never seen you before! How's it going?",
+      "sprite": "happy"
+    },
+    {
+      "speaker": "NPC1",
+      "text": "Hey! Not bad, just chillin'. What's up with you?",
+      "sprite": "angry"
+    },
+    {
+      "speaker": "NPC2",
+      "text": "So, we're going to do some group activities and I was wondering what role you'd like to play?"
+    },
+    {
+      "speaker": "NPC1",
+      "text": "Nah, it doesn't matter to me. I'm good with whatever."
+    },
+    {
+      "speaker": "NPC2",
+      "text": "Okay, cool. Have you read the book we're supposed to discuss for the group activity?"
+    },
+    {
+      "speaker": "NPC1",
+      "text": "Nah, I didn't bother. It's not that important, right?"
+    },
+    {
+      "speaker": "NPC2",
+      "text": "Um, actually, we're supposed to bring the book to class. Did you bring it?"
+    },
+    {
+      "speaker": "NPC1",
+      "text": "Nah, I didn't bother. I'd rather play than do group activities, to be honest."
+    },
+    {
+      "speaker": "NPC2",
+      "text": "But the teacher said we have to do it together. It's not fair if you don't participate."
+    },
+    {
+      "speaker": "NPC1",
+      "text": "Even if I don't do it, there are plenty of other people who can do it for me. And honestly, I'd rather play than waste my time on a book."
+    },
+    {
+      "speaker": "NPC2",
+      "text": "I understand that you want to have fun, but it's important that we all work together and learn from each other."
+    },
+    {
+      "speaker": "NPC1",
+      "text": "Yeah, yeah, I know. But come on, can't we just have some fun for once?"
+    },
+    {
+      "speaker": "NPC2",
+      "text": "I get it, but we have to follow the rules. And besides, there are plenty of other fun things we can do besides group activities."
+    },
+    {
+      "speaker": "NPC1",
+      "text": "Fine, whatever. Can we just play now?"
+    },
+    {
+      "speaker": "NPC2",
+      "text": "I guess so. But let's at least try to do the group activity first, okay?"
+    },
+    {
+      "speaker": "NPC1",
+      "text": "Ugh, fine. But I'm only doing it because I have to, not because I want to."
+    },
+    {
+      "speaker": "NPC2",
+      "text": "Alright, let's get started then."
+    }
+  ]
+}

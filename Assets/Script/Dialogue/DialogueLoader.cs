@@ -7,8 +7,9 @@ using System.Collections.Generic;
 public class DialogueLine
 {
     public string currentline;
-    public string npcname;
+    public string speaker;
     public string text;
+    public string sprite;
 }
 
 [System.Serializable]
@@ -26,13 +27,13 @@ public class DialogueLoader : MonoBehaviour
         LoadDialogue("conversation"); //json파일 가져오기
         foreach (var line in dialoguedata.dialogues)
         {
-            Debug.Log($"{line.npcname}: {line.text}");
+            Debug.Log($"{line.speaker}: {line.text}");
         }
     }
 
     void LoadDialogue(string file)
     {
-        TextAsset dia_json = Resources.Load<TextAsset>(file);
+        TextAsset dia_json = Resources.Load<TextAsset>("JSON/conversation");
         if (dia_json != null)
         {
             dialoguedata = JsonUtility.FromJson<DialogueData>(dia_json.text);
