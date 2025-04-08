@@ -1,5 +1,5 @@
 {
-  "dialogues": [ // sprite는 happy, angry, normal 로 구성
+  "dialogues": [ 
     {
       "speaker": "NPC2",
       "text": "Hey, I've never seen you before! How's it going?",
@@ -12,63 +12,78 @@
     },
     {
       "speaker": "NPC2",
-      "text": "So, we're going to do some group activities and I was wondering what role you'd like to play?"
+      "text": "So, we're going to do some group activities and I was wondering what role you'd like to play?",
+      "sprite": "normal"
     },
     {
       "speaker": "NPC1",
-      "text": "Nah, it doesn't matter to me. I'm good with whatever."
+      "text": "Nah, it doesn't matter to me. I'm good with whatever.",
+      "sprite": "normal"
     },
     {
       "speaker": "NPC2",
-      "text": "Okay, cool. Have you read the book we're supposed to discuss for the group activity?"
+      "text": "Okay, cool. Have you read the book we're supposed to discuss for the group activity?",
+      "sprite": "normal"
     },
     {
       "speaker": "NPC1",
-      "text": "Nah, I didn't bother. It's not that important, right?"
+      "text": "Nah, I didn't bother. It's not that important, right?",
+      "sprite": "normal"
     },
     {
       "speaker": "NPC2",
-      "text": "Um, actually, we're supposed to bring the book to class. Did you bring it?"
+      "text": "Um, actually, we're supposed to bring the book to class. Did you bring it?",
+      "sprite": "happy"
     },
     {
       "speaker": "NPC1",
-      "text": "Nah, I didn't bother. I'd rather play than do group activities, to be honest."
+      "text": "Nah, I didn't bother. I'd rather play than do group activities, to be honest.",
+      "sprite": "normal"
     },
     {
       "speaker": "NPC2",
-      "text": "But the teacher said we have to do it together. It's not fair if you don't participate."
+      "text": "But the teacher said we have to do it together. It's not fair if you don't participate.",
+      "sprite": "angry"
     },
     {
       "speaker": "NPC1",
-      "text": "Even if I don't do it, there are plenty of other people who can do it for me. And honestly, I'd rather play than waste my time on a book."
+      "text": "Even if I don't do it, there are plenty of other people who can do it for me. And honestly, I'd rather play than waste my time on a book.",
+      "sprite": "normal"
     },
     {
       "speaker": "NPC2",
-      "text": "I understand that you want to have fun, but it's important that we all work together and learn from each other."
+      "text": "I understand that you want to have fun, but it's important that we all work together and learn from each other.",
+      "sprite": "happy"
     },
     {
       "speaker": "NPC1",
-      "text": "Yeah, yeah, I know. But come on, can't we just have some fun for once?"
+      "text": "Yeah, yeah, I know. But come on, can't we just have some fun for once?",
+      "sprite": "angry"
     },
     {
       "speaker": "NPC2",
-      "text": "I get it, but we have to follow the rules. And besides, there are plenty of other fun things we can do besides group activities."
+      "text": "I get it, but we have to follow the rules. And besides, there are plenty of other fun things we can do besides group activities.",
+      "sprite": "happy"
     },
     {
       "speaker": "NPC1",
-      "text": "Fine, whatever. Can we just play now?"
+      "text": "Fine, whatever. Can we just play now?",
+      "sprite": "normal"
     },
     {
       "speaker": "NPC2",
-      "text": "I guess so. But let's at least try to do the group activity first, okay?"
+      "text": "I guess so. But let's at least try to do the group activity first, okay?",
+      "sprite": "angry"
     },
     {
       "speaker": "NPC1",
-      "text": "Ugh, fine. But I'm only doing it because I have to, not because I want to."
+      "text": "Ugh, fine. But I'm only doing it because I have to, not because I want to.",
+      "sprite": "normal"
     },
     {
       "speaker": "NPC2",
-      "text": "Alright, let's get started then."
+      "text": "Alright, let's get started then.",
+      "sprite": "happy"
     }
   ]
 }

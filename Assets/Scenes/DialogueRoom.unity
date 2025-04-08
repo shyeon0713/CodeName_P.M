@@ -870,9 +870,24 @@ MonoBehaviour:
   dialogueLoader: {fileID: 807694057}
   npcnametext: {fileID: 826041096}
   dialogueText: {fileID: 1810523498}
-  characterImage: {fileID: 0}
-  characterSprites: []
-  spriteNames: []
+  npc1Image: {fileID: 1784755041}
+  npc2Image: {fileID: 619144306}
+  npc1SpriteList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  npc2SpriteList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  npc1SpriteNames:
+  - normal
+  - happy
+  - angry
+  npc2SpriteNames:
+  - normal
+  - happy
+  - angry
 --- !u!1 &807694056
 GameObject:
   m_ObjectHideFlags: 0

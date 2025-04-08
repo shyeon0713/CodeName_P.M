@@ -1,12 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections.Generic;
 
 [System.Serializable]
 public class DialogueLine
 {
-    public string currentline;
     public string speaker;
     public string text;
     public string sprite;
@@ -24,23 +22,19 @@ public class DialogueLoader : MonoBehaviour
 
     private void Start()
     {
-        LoadDialogue("conversation"); //json파일 가져오기
+        LoadDialogue("JSON/conversation"); //json파일 가져오기
         foreach (var line in dialoguedata.dialogues)
         {
-            Debug.Log($"{line.speaker}: {line.text}");
+           // Debug.Log($"{line.speaker}: {line.text}");
         }
     }
 
-    void LoadDialogue(string file)
+    public void LoadDialogue(string file)
     {
         TextAsset dia_json = Resources.Load<TextAsset>("JSON/conversation");
         if (dia_json != null)
         {
             dialoguedata = JsonUtility.FromJson<DialogueData>(dia_json.text);
-        }
-        else
-        {
-            Debug.LogError("파일이 올바르지 않습니다." + file);
         }
 
     }
