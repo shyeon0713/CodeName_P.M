@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Briefing.unity
     guid: 2540163692ced9f428ab2f02029fa0bb
+  - enabled: 1
+    path: Assets/Scenes/DialogueRoom.unity
+    guid: c2c3652ac318beb40bf7a1612fb76b0b
   m_configObjects: {}

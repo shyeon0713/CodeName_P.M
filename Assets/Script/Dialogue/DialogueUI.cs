@@ -22,7 +22,7 @@ public class DialogueUI : MonoBehaviour
     public List<string> npc2SpriteNames;
     // sprite는 happy, angry, normal 로 구성
     //Json에서 //주석을 지원하기 않아서 이곳에 작성
-
+    float gray = 111f / 225f;
 
     private Dictionary<string, Sprite> npc1SpriteDict = new();
     private Dictionary<string, Sprite> npc2SpriteDict = new();
@@ -31,6 +31,7 @@ public class DialogueUI : MonoBehaviour
 
     void Start()
     {
+
         dialogueLoader.LoadDialogue("JSON/conversation");
         nextscript.onClick.AddListener(OutputScript);  // 버튼 연결
 
@@ -71,19 +72,21 @@ public class DialogueUI : MonoBehaviour
         npcnametext.text = line.speaker;
         dialogueText.text = line.text;
 
-
-        npc1Image.gameObject.SetActive(false);   //이미지 비활성활 -> 시작할 때
-        npc2Image.gameObject.SetActive(false);     //이미지 비활성활 -> 시작할 때
-
+        // npc1Image.gameObject.SetActive(false);   //이미지 비활성활 -> 시작할 때
+        //npc2Image.gameObject.SetActive(false);     //이미지 비활성활 -> 시작할 때
+        npc1Image.color = new Color(1f, 1f, 1f, 1f);
+        npc2Image.color = new Color(1f, 1f, 1f, 1f);
 
         if (line.speaker == "NPC1")
         {
-            npc1Image.gameObject.SetActive(true);
+            // npc1Image.gameObject.SetActive(true);  
+            npc2Image.color = new Color(gray, gray, gray, 1f);  //이미지2는 회색
             npc1Image.sprite = GetSpriteFromDict(npc1SpriteDict, line.sprite);
         }
         else if (line.speaker == "NPC2")
         {
-            npc2Image.gameObject.SetActive(true);
+            // npc2Image.gameObject.SetActive(true);
+            npc1Image.color = new Color(gray, gray, gray, 1f);  //이미지1은 회색
             npc2Image.sprite = GetSpriteFromDict(npc2SpriteDict, line.sprite);
         }
     }
