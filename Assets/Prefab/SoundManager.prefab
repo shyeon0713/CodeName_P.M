@@ -250,6 +250,10 @@ MonoBehaviour:
     bgmClip: {fileID: 8300000, guid: 7dd2e3496b3bb314e99bd1df1f57f615, type: 3}
   - sceneName: DialogueRoom
     bgmClip: {fileID: 8300000, guid: 7dd2e3496b3bb314e99bd1df1f57f615, type: 3}
+  - sceneName: MissionReport
+    bgmClip: {fileID: 8300000, guid: 7dd2e3496b3bb314e99bd1df1f57f615, type: 3}
+  - sceneName: Briefing
+    bgmClip: {fileID: 8300000, guid: 7dd2e3496b3bb314e99bd1df1f57f615, type: 3}
 --- !u!114 &8421864875382046787
 MonoBehaviour:
   m_ObjectHideFlags: 0

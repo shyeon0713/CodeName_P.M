@@ -41,12 +41,15 @@ public class SoundManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
-        BGM = GetComponent<AudioSource>();  // 기존 AudioSource 사용 \
+        BGM = GetComponent<AudioSource>();  // 기존 AudioSource 사용 
                                             // (gameObject.AddComponent<AudioSource>() 활용 시, 새로운 AudioSource추가
                                             // AudioMixer를 설정해두어도 새로운 AudioSource를 추가하고 있기에
                                             // inspector에서 설정한 값이 제대로 적용되지 않음
 
+        float bgmVolume = PlayerPrefs.GetFloat("BGMVolume", 1.0f); // Player_prefs.cs에 저장된 설정 가져오기
+        BGM.volume = bgmVolume;
 
+        OnSound = PlayerPrefs.GetInt("BGM_ON", 1) == 1;
 
         // 씬이 바뀔 때마다 BGM 변경
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -88,14 +91,11 @@ public class SoundManager : MonoBehaviour
             BGM.Play();
 
         OnSound = !OnSound;
+
+        PlayerPrefs.SetInt("BGM_ON", OnSound ? 1 : 0);
+        PlayerPrefs.Save();
     }
 
-    /*  private void SetBGMVolume(float Slidervalue)    //Slider UI
-      {
-          SoundControl.SetFloat("bgmvolume", Mathf.Log10(Slidervalue) * 20);
-          // Volume 값이 데시벨이기 때문에 고정적인 간격을 가지지 못함으로 Log10 사용
-      }
-    */
 
     //문제 -> Scene를 전환할 경우 이전 Scene에서 저장한 볼륨기록이 똑같이 적용되지 않음
     // 해결방안 -> Player.prefs를 만든 후, 설정 값 저장

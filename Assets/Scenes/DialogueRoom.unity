@@ -799,20 +799,24 @@ MonoBehaviour:
   npc2Image: {fileID: 1079371688}
   npc1SpriteList:
   - {fileID: 21300000, guid: c9a9369e218e3084e9d80f9c6573fbc2, type: 3}
-  - {fileID: 21300000, guid: c9a9369e218e3084e9d80f9c6573fbc2, type: 3}
-  - {fileID: 21300000, guid: c9a9369e218e3084e9d80f9c6573fbc2, type: 3}
+  - {fileID: 21300000, guid: 61753f5c6508ecb4c936b7ccccbfed4f, type: 3}
+  - {fileID: 21300000, guid: e68fe50c2445346439a5f44bfca59c88, type: 3}
+  - {fileID: 21300000, guid: f219026def8f2344db06bd67885cb1c2, type: 3}
   npc2SpriteList:
   - {fileID: 21300000, guid: a458d0cbfd6b2714da63d09777017017, type: 3}
-  - {fileID: 21300000, guid: a458d0cbfd6b2714da63d09777017017, type: 3}
-  - {fileID: 21300000, guid: a458d0cbfd6b2714da63d09777017017, type: 3}
+  - {fileID: 21300000, guid: db49d5b3649f4d6468fd67f3cf286cb9, type: 3}
+  - {fileID: 21300000, guid: d197b37aff131a5469b5a3e7fef63929, type: 3}
+  - {fileID: 21300000, guid: 4f9131b01bfc2d24f95a602a01373f05, type: 3}
   npc1SpriteNames:
   - normal
   - happy
   - angry
+  - sad
   npc2SpriteNames:
   - normal
   - happy
   - angry
+  - sad
 --- !u!1 &807694056
 GameObject:
   m_ObjectHideFlags: 0
